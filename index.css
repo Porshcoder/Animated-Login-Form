@@ -37,8 +37,23 @@ body{
     transform-origin: bottom right;
     background: linear-gradient(0deg, transparent,#45f3ff,#45f3ff);
     animation: animate 6s linear infinite;
+    
+}
+
+.card::after{
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent,#45f3ff,#45f3ff);
+    animation: animate 6s linear infinite;
     animation-delay: -3s;
 }
+
 
 @keyframes animate{
 0%{
@@ -52,12 +67,15 @@ body{
 form{
     position: absolute;
     inset: 2px;
-    background: #000;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./image/digital-world-map_1017-8011.webp) ;
     padding: 50px 40px;
     border-radius: 8px;
     z-index: 2;
     display: flex;
     flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h2{
@@ -94,7 +112,7 @@ h2{
     pointer-events: none;
     font-size: 1em;
     color: #8f8f8f;
-    letter-spacing: 0.05em;
+    letter-spacing: 00.05em;
     transition: 0.5s;
 }
 
@@ -120,8 +138,8 @@ font-size: 0.75em;
     transition: 0.5s;
 }
 
-.inputbox input:valid ~ span,
-.inputbox input:focus ~ span
+.inputbox input:valid ~ i,
+.inputbox input:focus ~ i
 {
     height: 44px;
 }
