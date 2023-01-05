@@ -12,7 +12,6 @@ body{
     flex-direction: column;
     background-image:; 
     display: flex;
-    color: ;
 }
 
 .card{
@@ -115,4 +114,22 @@ font-size: 0.75em;
     overflow: hidden;
     pointer-events: none;
     z-index: 9;
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span
+{
+    height: 44px;
+}
+
+.links{
+display: flex;
+justify-content: space-between;
+}
+
+.links a{
+    margin: 10px;
+    font-size: 0.075em;
+    color: #8f8f8f;
+    text-decoration: beige;
 }
